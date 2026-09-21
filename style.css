@@ -20,7 +20,195 @@ body {
 /* ==========================================
    TERMINAL
 ========================================== */
+/* ==========================================
+   PANTALLA DEL NOMBRE
+========================================== */
 
+#nameScreen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 200;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #182235 0%,
+            #080b12 65%,
+            #030405 100%
+        );
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+#nameScreen.hide {
+
+    opacity: 0;
+
+    transform: scale(1.08);
+
+}
+
+
+.name-box {
+
+    width: min(500px, 90%);
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    background:
+        rgba(10, 12, 18, 0.9);
+
+    border:
+
+        1px solid
+        rgba(255, 210, 28, 0.25);
+
+    border-radius: 20px;
+
+    box-shadow:
+
+        0 0 50px
+        rgba(255, 210, 28, 0.08);
+
+}
+
+
+.name-flower {
+
+    font-size: 70px;
+
+    margin-bottom: 15px;
+
+    animation:
+        floatFlower 2s ease-in-out infinite;
+}
+
+
+.name-box h1 {
+
+    font-size: 28px;
+
+    color: #ffd21c;
+
+    margin-bottom: 12px;
+
+}
+
+
+.name-box p {
+
+    color: #bbb;
+
+    font-size: 17px;
+
+    margin-bottom: 25px;
+
+}
+
+
+#nameInput {
+
+    width: 100%;
+
+    padding: 15px 18px;
+
+    border-radius: 10px;
+
+    border: 1px solid #444;
+
+    outline: none;
+
+    background: #11151c;
+
+    color: white;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    font-family:
+        Consolas,
+        monospace;
+
+    transition:
+        border 0.3s,
+        box-shadow 0.3s;
+}
+
+
+#nameInput:focus {
+
+    border-color: #ffd21c;
+
+    box-shadow:
+        0 0 15px
+        rgba(255, 210, 28, 0.2);
+
+}
+
+
+#nameInput::placeholder {
+
+    color: #666;
+
+}
+
+
+.press-enter {
+
+    margin-top: 18px;
+
+    color: #777;
+
+    font-family:
+        Consolas,
+        monospace;
+
+    font-size: 13px;
+
+}
+
+
+.press-enter strong {
+
+    color: #ffd21c;
+
+}
+
+
+@keyframes floatFlower {
+
+    0%, 100% {
+
+        transform:
+            translateY(0)
+            rotate(-3deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px)
+            rotate(3deg);
+
+    }
+
+}
 #terminal {
     position: fixed;
     inset: 0;
